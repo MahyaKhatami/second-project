@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Second Project</title>
+</head>
+<body>
+    <aside class="fixed mt-5 mb-5 mr-5 h-[700px] rounded-lg shadow-lg p-4">
+        <div class="flex flex-row gap-3">
+            <img src="images/Ellipse 136.png" alt="">
+            <div class="flex flex-col gap-2">
+                <p class="font-bold">سلام، رویا</p>
+                <p class="text-gray-500">سه شنبه، ۵ بهمن 1402</p>
+            </div>
+        </div>
+        <div class="text-gray-600 flex flex-col gap-6 mt-10">
+            <div class="flex flex-row gap-4 bg-blue-50 rounded-lg p-1 pr-3 hover:cursor-pointer">
+                <img class="h-1/2" src="images/home-2.png" alt="">
+                <p class="text-blue-400">خانه</p>
+            </div>
+            <div class="flex flex-row gap-4 p-1 pr-3 hover:cursor-pointer">
+                <img class="h-1/2" src="images/task-square.png" alt="">
+                <p>تسک‌ها</p>
+            </div>
+            <div class="flex flex-row gap-4 p-1 pr-3 hover:cursor-pointer">
+                <img class="h-1/2" src="images/calendar.png" alt="">
+                <p>تقویم</p>
+            </div>
+            <div class="flex flex-row gap-4 p-1 pr-3 hover:cursor-pointer">
+                <img class="h-1/2" src="images/arrange-square-2.png" alt="">
+                <p>گزارشات</p>
+            </div>
+            <div class="flex flex-row gap-4 p-1 pr-3 hover:cursor-pointer">
+                <img class="h-1/2" src="images/setting.png" alt="">
+                <p>تنظیمات</p>
+            </div>
+            <div class="flex flex-row gap-4 p-1 pr-3 hover:cursor-pointer">
+                <img class="h-1/2" src="images/24-support.png" alt="">
+                <p>پشتیبانی</p>
+            </div>
+            <div class="flex flex-row gap-4 p-1 pr-3 hover:cursor-pointer">
+                <img class="h-1/2" src="images/profile.png" alt="">
+                <p>پروفایل</p>
+            </div>
+        </div>
+        <div class="flex flex-row gap-5 mt-24 rounded-lg mx-3 bg-slate-100 p-1">
+            <div class="flex flex-row gap-2 bg-white px-1 rounded-lg hover:cursor-pointer">
+                <img class="h-2/3 mt-1" src="images/sun.png" alt="">
+                <p>روشن</p>
+            </div>
+            <div class="flex flex-row gap-2 hover:cursor-pointer">
+                <img class="h-2/3 mt-1" src="images/moon.png" alt="">
+                <p class="text-gray-500">تاریک</p>
+            </div>
+        </div>
+        <div class="flex flex-row gap-4 mt-7 mx-3 text-gray-600 hover:cursor-pointer">
+            <img class="h-1/2" src="images/logout.png" alt="">
+            <p>خروج</p>
+        </div>
+    </aside>
+
+    <main class="mr-[300px] pt-10 px-32">
+        <div>
+            <p class="font-bold text-xl">تسک‌های امروز</p>
+            <p class="text-gray-400 pt-1">3 تسک را باید انجام دهید.</p>
+        </div>
+        <div id="toggleFormButton">
+            <button type="submit" id="add" class="relative flex flex-row items-center gap-3 border border-dashed w-4/5 h-[57px] mt-4 pr-3 hover:cursor-pointer rounded-lg">
+                <img class="h-1/2" src="images/add.png" alt="">
+                <p class="text-blue-400">افزودن وظیفه جدید</p>
+            </button>
+        </div>
+
+        <form id="todoForm" class="flex flex-col gap-2 p-4 w-4/5 my-7 border rounded-lg border-gray-100">
+            <div class="form-group">
+                <input type="text" id="todoInput" maxlength="50" autocomplete="off"
+                    placeholder="نام تسک">
+            </div>
+            <div class="form-group">
+                <textarea type="text" id="todotextarea" cols="60"
+                                    maxlength="500" autocomplete="off" placeholder="توضیحات"></textarea>
+            </div>
+            <div>
+                   <span value="high" class="text-red-600 bg-red-100 rounded-md py-1 px-2 hover:cursor-pointer">بالا</span>
+                   <span value="medium" class="text-orange-400 bg-orange-100 rounded-md py-1 px-2 hover:cursor-pointer">متوسط</span>
+                   <span value="low" class="text-green-500 bg-green-100 rounded-md py-1 px-2 hover:cursor-pointer">پایین</span>
+            </div>
+            <button id="addTodoButton" type="submit" class="bg-blue-400 text-white w-28 h-10 rounded-lg mr-[550px]">اضافه کردن تسک</button>
+        </form>
+
+        <div id="img" class="my-7 ml-60 flex flex-col gap-4 justify-center items-center text-center">
+            <img class="w-full" src="images/2143202_Artboard 1.png" alt="">
+            <div>
+                <p class="text-gray-500 text-xl mb-2 font-bold checked:line-through">چه کارهایی امروز برای انجام داری؟</p>
+                <p class="text-gray-400">میتونی الان تسک‌هاتو اینجا بنویسی و برنامه‌ریزی رو شروع کنی!</p>
+            </div>
+        </div>
+
+            <div id="todoList">
+
+                <div id="tasks"></div>
+
+            </div>
+
+            </div>
+        </div>
+        <div id="completedTasks" class="flex flex-col gap-4 mb-10">
+         
+        </div> 
+
+
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
